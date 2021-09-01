@@ -32,6 +32,11 @@ const htmlTetris = fs.readFileSync(
   "utf-8"
 );
 
+const pkithingy = fs.readFileSync(
+  `${__dirname}/public/C83851FBB0DE34360A402491C81FC601.txt`,
+  "utf-8"
+);
+
 // app.set("view engine", "pug");
 // app.set("views", "./views");
 
@@ -76,5 +81,13 @@ app.get("/tetris", (req, res) => {
   res.writeHead(200, { "Content-type": "text/html" });
   res.end(htmlTetris);
 });
+
+app.get(
+  "/.well-known/pki-validation/C83851FBB0DE34360A402491C81FC601.txt",
+  (req, res) => {
+    res.writeHead(200, { "Content-type": "text/html" });
+    res.end(pkithingy);
+  }
+);
 
 module.exports = app;
