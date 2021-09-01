@@ -82,12 +82,12 @@ app.get("/tetris", (req, res) => {
   res.end(htmlTetris);
 });
 
-app.get(
-  "/.well-known/pki-validation/C83851FBB0DE34360A402491C81FC601.txt",
-  (req, res) => {
-    res.writeHead(200, { "Content-type": "text/html" });
-    res.end(pkithingy);
-  }
-);
+// app.get(
+//   "/.well-known/pki-validation/C83851FBB0DE34360A402491C81FC601.txt",
+//   (req, res) => {
+//     res.writeHead(200, { "Content-type": "text/html" });
+//     res.end(pkithingy);
+//   }
+//);
 
 module.exports = app;
