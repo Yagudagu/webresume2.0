@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "watch:js": "parcel watch --no-hmr ./public/index.js --out-dir ./public --out-file bundle.js --public-url ./",
+    "build:piano": "parcel watch ./public/Piano/index.js --out-dir ./public/Piano --out-file bundle.js --public-url ./",
     "build:js": "parcel watch ./public/index.js --out-dir ./public --out-file bundle.js"
   },
   "author": "Jacob",
@@ -14,6 +15,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "nodemon": "^2.0.12",
-    "parcel-bundler": "^1.12.5"
+    "parcel-bundler": "^1.12.5",
+    "tone": "^14.7.77"
   }
 }
